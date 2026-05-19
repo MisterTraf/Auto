@@ -1092,7 +1092,7 @@
                 <div>
                     <label for="phone" class="text-sm font-medium">Телефон или мессенджер</label>
                     <input required name="phone" id="phone" type="tel" class="mt-1 w-full border rounded-xl px-4 py-3" placeholder="+7 (___) ___-__-__" />
-                    <p id="phone-error" class="error-message hidden text-red-600">Пожалуйста, введите действительный номер телефона (например, +7 (XXX) XXX-XX-XX)</p>
+                    <p id="phone-error" class="hidden text-red-600 text-sm mt-1">Пожалуйста, введите корректный номер телефона в формате +7 (XXX) XXX-XX-XX</p>
                 </div>
                 <div>
                     <label for="message" class="text-sm font-medium">Кратко о ситуации</label>
@@ -1389,98 +1389,120 @@
             });
         });
     </script>
-</body>
-</html>
+    <!-- Form submission (email via FormSubmit.co) + phone validation -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("contact-form");
+        if (!form) return;
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const submitBtnLabel = submitBtn ? submitBtn.textContent : "";
+        const phoneInput = document.getElementById("phone");
+        const phoneError = document.getElementById("phone-error");
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("contact-form");
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    // Получение данных формы
-    const username = document.getElementById("username").value;
-    const phone = document.getElementById("phone").value;
-    const city = document.getElementById('city').value;
-    const message = document.getElementById("message").value;
-    const consent = document.getElementById("consent").checked;
-
-    // Валидация
-    if (!username || !phone || !message || !consent) {
-      alert("Пожалуйста, заполните все поля и согласитесь с политикой.");
-      return;
-    }
-
-    // Форматирование сообщения для Telegram
-    const telegramMessage = `<b>Новая заявка с сайта</b>\n\n` +
-                           `<b>Имя:</b> ${username}\n` +
-                           `<b>Город/Регион:</b> ${city}\n` +
-                           `<b>Телефон:</b> ${phone}\n` +
-                           `<b>Сообщение:</b> ${message}\n` +
-                           `<b>Согласие на обработку данных:</b> ${consent ? "Да" : "Нет"}`;
-
-    // Отправка в Telegram
-    const botToken = "7986439845:AAFq3LDe-tSOQU9dk6x7VcVjCk1QXpxtV1A"; // Замените на ваш токен от BotFather
-    const chatId = "-1003010331542"; // Замените на ваш Chat ID
-    const apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
-
-    fetch(apiUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        chat_id: chatId,
-        text: telegramMessage,
-        parse_mode: "HTML",
-      }),
-    })
-      .then(response => response.json())
-      .then(data => {
-        if (data.ok) {
-          form.reset();
-          window.location.href = "thank-you.html"; // Перенаправление на thank-you.html
-        } else {
-          alert("Ошибка отправки: " + data.description);
+        if (phoneInput && window.IMask) {
+          IMask(phoneInput, {
+            mask: "+{7} (000) 000-00-00",
+            lazy: false,
+            placeholderChar: "_"
+          });
         }
-      })
-      .catch(error => {
-        alert("Ошибка отправки: " + error.message);
-      });
-  });
-});
 
-</script>
+        function isValidPhone(value) {
+          if (!value || !window.libphonenumber) return false;
+          try {
+            const parsed = libphonenumber.parsePhoneNumberFromString(value, "RU");
+            return !!(parsed && parsed.isValid());
+          } catch (e) {
+            return false;
+          }
+        }
 
-<script>
-        // Mobile menu toggle
-      const menuToggle = document.getElementById("menu-toggle");
-      const mobileMenu = document.getElementById("mobile-menu");
-      menuToggle.addEventListener("click", function () {
-        mobileMenu.classList.toggle("active");
-      });
-      mobileMenu.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", function () {
-          mobileMenu.classList.remove("active");
+        function setPhoneErrorVisible(visible) {
+          if (!phoneError) return;
+          phoneError.classList.toggle("hidden", !visible);
+        }
+
+        if (phoneInput) {
+          phoneInput.addEventListener("blur", function () {
+            const v = phoneInput.value.trim();
+            setPhoneErrorVisible(!!v && !isValidPhone(v));
+          });
+          phoneInput.addEventListener("input", function () {
+            if (isValidPhone(phoneInput.value)) setPhoneErrorVisible(false);
+          });
+        }
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const username = (document.getElementById("username").value || "").trim();
+          const phone = (phoneInput ? phoneInput.value : "").trim();
+          const city = document.getElementById("city").value;
+          const message = (document.getElementById("message").value || "").trim();
+          const consent = document.getElementById("consent").checked;
+
+          if (!username || !phone || !message || !consent) {
+            alert("Пожалуйста, заполните все поля и подтвердите согласие на обработку персональных данных.");
+            return;
+          }
+
+          if (!isValidPhone(phone)) {
+            setPhoneErrorVisible(true);
+            phoneInput && phoneInput.focus();
+            return;
+          }
+
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Отправляем…";
+          }
+
+          fetch("https://formsubmit.co/ajax/info@vozvrat-prav.com", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "Accept": "application/json"
+            },
+            body: JSON.stringify({
+              "Имя": username,
+              "Город": city,
+              "Телефон": phone,
+              "Сообщение": message,
+              "Согласие на обработку ПДн": consent ? "Да" : "Нет",
+              "_subject": "Новая заявка с сайта АвтоЮрист",
+              "_template": "table",
+              "_captcha": "false"
+            })
+          })
+            .then(function (response) {
+              return response.json().catch(function () { return {}; })
+                .then(function (data) { return { ok: response.ok, data: data }; });
+            })
+            .then(function (result) {
+              const ok = result.ok;
+              const data = result.data || {};
+              const success = data.success === true || data.success === "true";
+              if (ok && success) {
+                form.reset();
+                window.location.href = "thank-you.html";
+              } else {
+                throw new Error(data.message || "Не удалось отправить заявку.");
+              }
+            })
+            .catch(function (error) {
+              alert(
+                "Ошибка отправки заявки: " + (error && error.message ? error.message : error) +
+                "\nПожалуйста, попробуйте ещё раз или позвоните нам."
+              );
+            })
+            .finally(function () {
+              if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = submitBtnLabel;
+              }
+            });
         });
       });
-
-      // Phone input masking and validation
-      const phoneInput = document.getElementById("phone");
-      const phoneError = document.getElementById("phone-error");
-      const phoneMask = IMask(phoneInput, {
-        mask: "+{7} (000) 000-00-00",
-        lazy: false,
-        placeholderChar: "_"
-      });
-
-      function validatePhoneNumber(input) {
-        try {
-          const phoneNumber = libphonenumber.parsePhoneNumberFromString(input, "RU");
-          return phoneNumber && phoneNumber.isValid();
-        } catch (error) {
-          return false;
-        }
-      }
-      
-</script>
+    </script>
+</body>
+</html>
