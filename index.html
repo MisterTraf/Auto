@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Автоюрист в Москве — бесплатная консультация 24/7</title>
+  <meta name="description" content="Автоюрист в МО: ДТП, споры с ГИБДД, возврат прав, ОСАГО/КАСКО, независимая экспертиза. Бесплатная консультация, работаем по договору, без предоплаты в ряде дел." />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://unpkg.com/imask"></script>
+  <script src="https://unpkg.com/libphonenumber-js@1.10.14/min/libphonenumber.min.js"></script>
+  <style>
+      html, body {
+          font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+          overflow-x: hidden; /* Добавлено, чтобы предотвратить горизонтальный скролл на мобильных */
+      }
+
+      .glass {
+          backdrop-filter: blur(8px);
+          background: rgba(255,255,255,0.75);
+      }
+
+      .section {
+          scroll-margin-top: 96px;
+      }
+
+      .swiper {
+          width: 100%;
+          max-width: 800px;
+          height: 600px;
+          position: relative;
+          overflow: hidden; /* Изменено на hidden, чтобы скрыть неактивные слайды */
+      }
+
+      .swiper-wrapper {
+          width: 100%;
+          display: flex;
+          align-items: center;
+      }
+
+      .swiper-slide {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+      }
+
+          .swiper-slide img {
+              max-width: 100%;
+              max-height: 100%;
+              object-fit: contain;
+              border-radius: 16px;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+          color: #000;
+          width: 48px;
+          height: 48px;
+          background-color: rgba(255, 255, 255, 0.9);
+          border-radius: 50%;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          transform: translateY(-50%);
+          transition: background-color 0.3s, transform 0.2s;
+      }
+
+          .swiper-button-prev:hover,
+          .swiper-button-next:hover {
+              background-color: rgba(255, 255, 255, 1);
+              transform: translateY(-50%) scale(1.1);
+          }
+
+      .swiper-button-prev {
+          left: -70px;
+      }
+
+      .swiper-button-next {
+          right: -70px;
+      }
+
+      .swiper-pagination-bullet {
+          background: #000;
+          opacity: 0.5;
+      }
+
+      .swiper-pagination-bullet-active {
+          opacity: 1;
+      }
+
+      /* Адаптивность для планшетов */
+      @media (max-width: 768px) {
+          .swiper {
+              max-width: 100%;
+              height: 850px;
+              overflow: hidden; /* Изменено на hidden */
+          }
+
+          .swiper-button-prev,
+          .swiper-button-next {
+              width: 36px;
+              height: 36px;
+              top: auto;
+              bottom: 10px;
+              transform: none;
+          }
+
+          .swiper-button-prev {
+              left: 10px;
+          }
+
+          .swiper-button-next {
+              right: 10px;
+          }
+      }
+
+      /* Адаптивность для мобильных */
+      @media (max-width: 480px) {
+          .swiper {
+              height: 500px;
+              overflow: hidden; /* Изменено на hidden */
+          }
+
+          .swiper-slide img {
+              transform: scale(1.2); /* Увеличиваем изображения на 20% для всех слайдеров */
+          }
+
+          .swiper-button-prev,
+          .swiper-button-next {
+              width: 30px;
+              height: 30px;
+              top: auto;
+              bottom: 10px;
+              transform: none;
+          }
+      }
+
+      /* Стили для кнопки "Вверх" (оставлены без изменений) */
+      #scrollToTopBtn {
+          opacity: 0.9;
+      }
+
+          #scrollToTopBtn:hover {
+              opacity: 1;
+              transform: scale(1.1);
+          }
+
+      @media (max-width: 768px) {
+          #scrollToTopBtn {
+              bottom: 4rem;
+              right: 4rem;
+              padding: 0.75rem;
+          }
+
+              #scrollToTopBtn svg {
+                  width: 1.25rem;
+                  height: 1.25rem;
+              }
+      }
+
+      @media (max-width: 480px) {
+          #scrollToTopBtn {
+              bottom: 3rem;
+              right: 3rem;
+              padding: 0.5rem;
+          }
+
+              #scrollToTopBtn svg {
+                  width: 1rem;
+                  height: 1rem;
+              }
+      }
+
+      /* Новые стили для адаптивности остальных секций */
+      /* Top bar */
+      @media (max-width: 768px) {
+          .top-bar {
+              flex-direction: column;
+              gap: 1rem;
+              text-align: center;
+              padding: 1rem;
+          }
+
+              .top-bar .flex {
+                  flex-direction: column;
+                  gap: 0.5rem;
+              }
+
+                  .top-bar .flex.items-center {
+                      flex-wrap: wrap; /* Добавлено, чтобы элементы не выходили за пределы */
+                      justify-content: center;
+                  }
+      }
+
+      @media (max-width: 480px) {
+          .top-bar {
+              font-size: 0.875rem; /* Уменьшаем шрифт */
+          }
+
+              .top-bar a {
+                  font-size: 0.875rem;
+              }
+      }
+
+      /* Header */
+      @media (max-width: 768px) {
+          header .flex {
+              flex-direction: row; /* Оставляем row для логотипа слева, меню справа */
+              justify-content: space-between;
+              align-items: center;
+              height: 4rem;
+              padding: 0.5rem 1rem; /* Уменьшаем padding для лучшей адаптации */
+              flex-wrap: nowrap; /* Предотвращаем перенос */
+          }
+
+          header nav {
+              display: none; /* Скрываем десктопную навигацию */
+          }
+
+          #menu-toggle {
+              display: block;
+          }
+
+          header a.bg-blue-600 {
+              display: none;
+          }
+
+          header .text-xl {
+              font-size: 1.125rem; /* Уменьшаем размер логотипа на планшетах */
+          }
+      }
+
+      @media (max-width: 480px) {
+          header .text-xl {
+              font-size: 1rem; /* Ещё меньше на мобильных */
+          }
+
+          header .flex {
+              padding: 0.25rem 0.5rem; /* Минимизируем padding */
+          }
+      }
+
+      /* Hero */
+      @media (max-width: 768px) {
+          #hero .lg\:grid-cols-2 {
+              grid-template-columns: 1fr;
+          }
+
+          #hero h1 {
+              font-size: 1.875rem; /* Уменьшаем заголовок */
+              line-height: 2.25rem;
+          }
+
+          #hero p {
+              font-size: 1rem;
+          }
+
+          #hero .grid-cols-4 {
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+
+          #hero .absolute {
+              width: 60%;
+              left: 4rem;
+              bottom: -2rem;
+          }
+      }
+
+      @media (max-width: 480px) {
+          #hero h1 {
+              font-size: 1.5rem;
+          }
+
+          #hero p {
+              font-size: 0.875rem;
+          }
+
+          #hero .aspect-w-4 {
+              aspect-ratio: 4 / 3;
+          }
+
+          #hero .absolute {
+              width: 80%;
+              left: 1rem;
+              bottom: -1rem;
+              font-size: 0.75rem;
+          }
+      }
+
+      /* Trust badges */
+      @media (max-width: 768px) {
+          #badges .sm\:grid-cols-4 {
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+      }
+
+      @media (max-width: 480px) {
+          #badges .p-4 {
+              padding: 0.75rem;
+              font-size: 0.875rem;
+          }
+      }
+
+      /* Services */
+      @media (max-width: 768px) {
+          #services .lg\:grid-cols-3 {
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+
+          #services h2 {
+              font-size: 1.875rem;
+          }
+      }
+
+      @media (max-width: 480px) {
+          #services .lg\:grid-cols-3 {
+              grid-template-columns: 1fr;
+          }
+
+          #services h2 {
+              font-size: 1.5rem;
+          }
+
+          #services p {
+              font-size: 0.875rem;
+          }
+
+          #services .p-6 {
+              padding: 1rem;
+          }
+      }
+
+      /* How it works */
+      @media (max-width: 768px) {
+          #how .lg\:grid-cols-4 {
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+
+          #how h2 {
+              font-size: 1.875rem;
+          }
+      }
+
+      @media (max-width: 480px) {
+          #how .lg\:grid-cols-4 {
+              grid-template-columns: 1fr;
+          }
+
+          #how h2 {
+              font-size: 1.5rem;
+          }
+
+          #how .p-6 {
+              padding: 1rem;
+          }
+      }
+
+      /* Cases */
+      @media (max-width: 768px) {
+          #cases .lg\:grid-cols-3 {
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+
+          #cases h2 {
+              font-size: 1.875rem;
+          }
+
+          #cases .sm\:grid-cols-3 {
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+      }
+
+      @media (max-width: 480px) {
+          #cases .lg\:grid-cols-3,
+          #cases .sm\:grid-cols-3 {
+              grid-template-columns: 1fr;
+          }
+
+          #cases h2 {
+              font-size: 1.5rem;
+          }
+
+          #cases .p-6 {
+              padding: 1rem;
+          }
+      }
+
+      /* Prices */
+      @media (max-width: 768px) {
+          #prices .lg\:grid-cols-3 {
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+
+          #prices h2 {
+              font-size: 1.875rem;
+          }
+      }
+
+      @media (max-width: 480px) {
+          #prices .lg\:grid-cols-3 {
+              grid-template-columns: 1fr;
+          }
+
+          #prices h2 {
+              font-size: 1.5rem;
+          }
+
+          #prices .p-6 {
+              padding: 1rem;
+          }
+      }
+
+      /* FAQ */
+      @media (max-width: 768px) {
+          #faq h2 {
+              font-size: 1.875rem;
+          }
+
+          #faq .p-5 {
+              padding: 1rem;
+          }
+      }
+
+      @media (max-width: 480px) {
+          #faq h2 {
+              font-size: 1.5rem;
+          }
+
+          #faq .text-sm {
+              font-size: 0.875rem;
+          }
+      }
+
+      /* Contact / CTA */
+      @media (max-width: 768px) {
+          #consult .lg\:grid-cols-2 {
+              grid-template-columns: 1fr;
+          }
+
+          #consult h2 {
+              font-size: 1.875rem;
+          }
+
+          #consult form {
+              padding: 1rem;
+          }
+      }
+
+      @media (max-width: 480px) {
+          #consult h2 {
+              font-size: 1.5rem;
+          }
+
+          #consult .text-sm {
+              font-size: 0.875rem;
+          }
+
+          #consult input,
+          #consult textarea {
+              padding: 0.5rem;
+          }
+
+          #consult button {
+              padding: 0.75rem;
+          }
+      }
+
+      /* Contacts */
+      @media (max-width: 768px) {
+          #contacts .lg\:grid-cols-3 {
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+
+          #contacts h2 {
+              font-size: 1.875rem;
+          }
+      }
+
+      @media (max-width: 480px) {
+          #contacts .lg\:grid-cols-3 {
+              grid-template-columns: 1fr;
+          }
+
+          #contacts h2 {
+              font-size: 1.5rem;
+          }
+
+          #contacts .p-4 {
+              padding: 0.75rem;
+          }
+
+          #contacts .text-sm {
+              font-size: 0.875rem;
+          }
+      }
+
+      /* Footer */
+      @media (max-width: 768px) {
+          footer .md\:grid-cols-4 {
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+
+          footer .text-lg {
+              font-size: 1.25rem;
+          }
+      }
+
+      @media (max-width: 480px) {
+          footer .md\:grid-cols-4 {
+              grid-template-columns: 1fr;
+          }
+
+          footer .text-sm {
+              font-size: 0.875rem;
+          }
+
+          footer .py-10 {
+              padding-top: 2rem;
+              padding-bottom: 2rem;
+          }
+      }
+
+      @media (max-width: 768px) {
+          header .flex {
+              flex-direction: row; /* Изменяем с column на row */
+              justify-content: space-between; /* Логотип слева, кнопка справа */
+              align-items: center; /* Вертикальное центрирование */
+              height: 4rem; /* Сохраняем высоту header */
+              padding: 0.5rem 0; /* Уменьшаем отступы */
+          }
+
+          header nav {
+              display: none; /* Оставляем скрытие десктопной навигации */
+          }
+
+          #menu-toggle {
+              display: block; /* Кнопка гамбургер-меню видна */
+          }
+
+          header a.bg-blue-600 {
+              display: none; /* Скрываем кнопку "Оценить шансы" */
+          }
+      }
+
+      #mobile-menu {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: rgba(255, 255, 255, 0.95);
+          backdrop-filter: blur(8px);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          padding: 1rem;
+          z-index: 50;
+      }
+
+          #mobile-menu.active {
+              display: block;
+          }
+
+          #mobile-menu a {
+              display: block;
+              padding: 0.5rem 0;
+              font-size: 1rem;
+              color: #1f2937;
+              text-align: center;
+          }
+
+              #mobile-menu a:hover {
+                  color: #2563eb;
+              }
+
+      @media (max-width: 768px) {
+          header nav {
+              display: none; /* Скрываем десктопную навигацию */
+          }
+
+          #menu-toggle {
+              display: block; /* Показываем кнопку гамбургер-меню */
+          }
+      }
+
+      #results .swiper {
+          width: 100%;
+          max-width: 800px;
+          height: 600px;
+          position: relative;
+          overflow: hidden; /* Изменено на hidden */
+      }
+
+      #results .swiper-wrapper {
+          width: 100%;
+          display: flex;
+          align-items: center;
+      }
+
+      #results .swiper-slide {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+      }
+
+          #results .swiper-slide img {
+              max-width: 100%;
+              max-height: 100%;
+              object-fit: contain;
+              border-radius: 16px;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          }
+
+      #results .swiper-button-prev,
+      #results .swiper-button-next {
+          color: #000;
+          width: 48px;
+          height: 48px;
+          background-color: rgba(255, 255, 255, 0.9);
+          border-radius: 50%;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          transform: translateY(-50%);
+          transition: background-color 0.3s, transform 0.2s;
+      }
+
+          #results .swiper-button-prev:hover,
+          #results .swiper-button-next:hover {
+              background-color: rgba(255, 255, 255, 1);
+              transform: translateY(-50%) scale(1.1);
+          }
+
+      #results .swiper-button-prev {
+          left: -70px;
+      }
+
+      #results .swiper-button-next {
+          right: -70px;
+      }
+
+      #results .swiper-pagination-bullet {
+          background: #000;
+          opacity: 0.5;
+      }
+
+      #results .swiper-pagination-bullet-active {
+          opacity: 1;
+      }
+
+      @media (max-width: 768px) {
+          #results .swiper {
+              max-width: 100%;
+              height: 850px;
+              overflow: hidden; /* Изменено на hidden */
+          }
+
+          #results .swiper-button-prev,
+          #results .swiper-button-next {
+              width: 36px;
+              height: 36px;
+              top: auto;
+              bottom: 10px;
+              transform: none;
+          }
+
+          #results .swiper-button-prev {
+              left: 10px;
+          }
+
+          #results .swiper-button-next {
+              right: 10px;
+          }
+      }
+
+      @media (max-width: 480px) {
+          #results .swiper {
+              height: 500px;
+          }
+
+          #results .swiper-slide img {
+              transform: scale(1.2); /* Увеличиваем изображения на 10% */
+          }
+
+          #results .swiper-button-prev,
+          #results .swiper-button-next {
+              width: 30px;
+              height: 30px;
+              top: auto;
+              bottom: 10px;
+              transform: none;
+          }
+      }
+
+      @media (max-width: 768px) {
+          #results h2,
+          #reviews h2 {
+              margin-bottom: 1rem; /* Уменьшаем отступ до 1rem (16px) */
+          }
+      }
+      /* Error message styling */
+      .error-message {
+          color: #dc2626;
+          font-size: 0.875rem;
+          margin-top: 0.25rem;
+          display: none;
+      }
+
+      .error input, .error textarea {
+          border-color: #dc2626 !important;
+      }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Top bar -->
+    <div class="bg-gray-900 text-gray-100 top-bar">
+        <div class="max-w-7xl mx-auto px-4 py-2 flex flex-col sm:flex-row items-center justify-between text-sm gap-2">
+            <div class="flex items-center space-x-4">
+                <span class="hidden sm:inline">ПН–ПТ 09:00–20:00, СБ–ВС 09:00–19:00</span>
+                <span class="hidden sm:inline">•</span>
+                <select name="top-bar-city" id="top-bar-city" class="bg-gray-900 text-gray-100 border-none hover:underline focus:outline-none">
+                    <option value="Москва и МО" selected>Москва</option>
+                    <option value="Рязань">Рязань</option>
+                    <option value="Ростов-на-Дону">Ростов-на-Дону</option>
+                    <option value="Владимир">Владимир</option>
+                    <option value="Нижний Новгород">Нижний Новгород</option>
+                    <option value="Самара">Самара</option>
+                    <option value="Пенза">Пенза</option>
+                    <option value="Тула">Тула</option>
+                    <option value="Тюмень">Тюмень</option>
+                    <option value="Мурманск">Мурманск</option>
+                    <option value="Омск">Омск</option>
+                    <option value="Воронеж">Воронеж</option>
+                    <option value="Барнаул">Барнаул</option>
+                    <option value="Архангельск">Архангельск</option>
+                </select>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="tel:+78006009969" class="font-semibold">7 (800) 333-23-51</a>
+                <h4>info@vozvrat-prav.com</h4>
+                <a href="#consult" class="px-3 py-1 rounded-md bg-white text-gray-900 font-semibold">Бесплатная консультация</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-40 bg-white/90 glass shadow-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <a href="#" class="font-extrabold tracking-tight text-xl">Авто<span class="text-blue-600">Юрист</span></a>
+                <nav class="hidden md:flex items-center space-x-8 font-medium">
+                    <a href="#services" class="hover:text-blue-600">Услуги</a>
+                    <a href="#how" class="hover:text-blue-600">Как работаем</a>
+                    <a href="#results" class="hover:text-blue-600">Результаты</a>
+                    <a href="#prices" class="hover:text-blue-600">Цены</a>
+                    <a href="#faq" class="hover:text-blue-600">FAQ</a>
+                    <a href="#contacts" class="hover:text-blue-600">Контакты</a>
+                </nav>
+                <button id="menu-toggle" class="md:hidden p-2 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+                <div id="mobile-menu" class="md:hidden">
+                    <a href="#services" class="block py-2 px-4 text-center hover:text-blue-600">Услуги</a>
+                    <a href="#how" class="block py-2 px-4 text-center hover:text-blue-600">Как работаем</a>
+                    <a href="#results" class="block py-2 px-4 text-center hover:text-blue-600">Результаты</a>
+                    <a href="#prices" class="block py-2 px-4 text-center hover:text-blue-600">Цены</a>
+                    <a href="#faq" class="block py-2 px-4 text-center hover:text-blue-600">FAQ</a>
+                    <a href="#contacts" class="block py-2 px-4 text-center hover:text-blue-600">Контакты</a>
+                </div>
+                <a href="#consult" class="hidden md:inline-flex bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl font-semibold shadow">Оценить шансы</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="section" id="hero">
+        <div class="max-w-7xl mx-auto px-4 pt-12 pb-16 grid lg:grid-cols-2 gap-8 items-center">
+            <div>
+                <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight">Автоюрист в <span class="selected-city">Москва и МО</span>: решим ваш вопрос по ДТП, штрафам и страховым спорам</h1>
+                <p class="mt-4 text-lg text-gray-700">Бесплатно оценим перспективы дела за 15 минут. Работаем по договору, прозрачно и в срок. Возможна оплата по результату для части категорий дел.</p>
+                <div class="mt-6 flex flex-col sm:flex-row gap-3">
+                    <a href="#consult" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold shadow">Получить консультацию</a>
+                    <a href="#services" class="px-6 py-3 rounded-xl font-semibold border border-gray-300 bg-white">Смотреть услуги</a>
+                </div>
+                <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm">
+                    <div class="p-3 bg-white rounded-xl shadow">10+ лет практики</div>
+                    <div class="p-3 bg-white rounded-xl shadow">> 3000 дел</div>
+                    <div class="p-3 bg-white rounded-xl shadow">95% выигранных дел*</div>
+                    <div class="p-3 bg-white rounded-xl shadow">24/7 онлайн</div>
+                </div>
+                <p class="mt-2 text-xs text-gray-500">*Процент успеха зависит от категории и обстоятельств дела и не гарантирует исход по вашему делу.</p>
+            </div>
+            <div class="relative">
+                <div class="aspect-w-4 aspect-h-3 rounded-2xl overflow-hidden shadow-lg">
+                    <img src="background1.webp" alt="ДТП и автоюридическая помощь" class="w-full h-full object-cover" />
+                </div>
+                <div class="absolute -bottom-6 left-6 bg-white rounded-2xl shadow p-4 w-72">
+                    <p class="text-sm">Средний срок досудебного урегулирования: <span class="font-semibold">14–30 дней</span></p>
+                    <p class="text-xs text-gray-500">По страховым спорам при наличии полного комплекта документов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust badges -->
+    <section class="section" id="badges">
+        <div class="max-w-7xl mx-auto px-2 py-5 flex justify-center gap-4">
+            <div class="bg-white rounded-xl p-4 shadow text-center">Офис в центре</div>
+            <div class="bg-white rounded-xl p-4 shadow text-center">Оплата по результату по исключительным делам</div>
+            <div class="bg-white rounded-xl p-4 shadow text-center">Судебная практика</div>
+            <div class="bg-white rounded-xl p-4 shadow text-center">Онлайн консультирование</div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section bg-white" id="services">
+        <div class="max-w-7xl mx-auto px-4 py-16">
+            <h2 class="text-2xl sm:text-4xl font-extrabold">Услуги автоюриста</h2>
+            <p class="mt-2 text-gray-600">Поможем в типовых и сложных ситуациях — от оформления ДТП до представительства в суде.</p>
+            <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="p-6 rounded-2xl border border-gray-200 hover:shadow">
+                    <h3 class="font-bold text-lg">Споры по ОСАГО/КАСКО</h3>
+                    <p class="mt-2 text-sm text-gray-600">Досудебные претензии, независимая экспертиза, взыскание недоплаты, штрафа и неустойки.</p>
+                    <ul class="mt-3 text-sm list-disc pl-5 space-y-1 text-gray-700">
+                        <li>Проверка расчёта страховой</li>
+                        <li>Оценка ущерба</li>
+                        <li>Подготовка иска и представительство</li>
+                    </ul>
+                    <a href="#consult" class="inline-block mt-4 text-blue-600 font-semibold">Оценить шансы →</a>
+                </div>
+                <div class="p-6 rounded-2xl border border-gray-200 hover:shadow">
+                    <h3 class="font-bold text-lg">Помощь при ДТП</h3>
+                    <p class="mt-2 text-sm text-gray-600">Оформление, разбор, обжалование, взыскание ущерба, защита в суде, работа с приставами.</p>
+                    <ul class="mt-3 text-sm list-disc pl-5 space-y-1 text-gray-700">
+                        <li>Осмотр места ДТП</li>
+                        <li>Сбор доказательств</li>
+                        <li>Переговоры с виновником/страховой</li>
+                    </ul>
+                    <a href="#consult" class="inline-block mt-4 text-blue-600 font-semibold">Оценить шансы →</a>
+                </div>
+                <div class="p-6 rounded-2xl border border-gray-200 hover:shadow">
+                    <h3 class="font-bold text-lg">Возврат водительских прав</h3>
+                    <p class="mt-2 text-sm text-gray-600">Обжалование лишения, возврат прав после суда, досрочный возврат, споры с ГИБДД.</p>
+                    <ul class="mt-3 text-sm list-disc pl-5 space-y-1 text-gray-700">
+                        <li>Анализ протокола</li>
+                        <li>Сбор доказательств невиновности</li>
+                        <li>Представительство в суде</li>
+                    </ul>
+                    <a href="#consult" class="inline-block mt-4 text-blue-600 font-semibold">Оценить шансы →</a>
+                </div>
+                <div class="p-6 rounded-2xl border border-gray-200 hover:shadow">
+                    <h3 class="font-bold text-lg">Обжалование штрафов ГИБДД</h3>
+                    <p class="mt-2 text-sm text-gray-600">Проверка постановлений, жалобы в ГИБДД/суд, отменa штрафов с камер, административные нарушения.</p>
+                    <ul class="mt-3 text-sm list-disc pl-5 space-y-1 text-gray-700">
+                        <li>Анализ фото/видео</li>
+                        <li>Подготовка жалобы</li>
+                        <li>Защита в суде</li>
+                    </ul>
+                    <a href="#consult" class="inline-block mt-4 text-blue-600 font-semibold">Оценить шансы →</a>
+                </div>
+                <div class="p-6 rounded-2xl border border-gray-200 hover:shadow">
+                    <h3 class="font-bold text-lg">Независимая экспертиза</h3>
+                    <p class="mt-2 text-sm text-gray-600">Оценка ущерба, УТС, трасологическая экспертиза, автотехническая, почерковедческая.</p>
+                    <ul class="mt-3 text-sm list-disc pl-5 space-y-1 text-gray-700">
+                        <li>Осмотр авто</li>
+                        <li>Расчёт по методике ЦБ</li>
+                        <li>Заключение для суда</li>
+                    </ul>
+                    <a href="#consult" class="inline-block mt-4 text-blue-600 font-semibold">Оценить шансы →</a>
+                </div>
+                <div class="p-6 rounded-2xl border border-gray-200 hover:shadow">
+                    <h3 class="font-bold text-lg">Споры с автодилерами</h3>
+                    <p class="mt-2 text-sm text-gray-600">Возврат авто, замена, устранение дефектов, расторжение ДКП, возврат денег, неустойка.</p>
+                    <ul class="mt-3 text-sm list-disc pl-5 space-y-1 text-gray-700">
+                        <li>Претензия дилеру</li>
+                        <li>Экспертиза авто</li>
+                        <li>Суд с дилером</li>
+                    </ul>
+                    <a href="#consult" class="inline-block mt-4 text-blue-600 font-semibold">Оценить шансы →</a>
+                </div>
+            </div>
+            <p class="mb-4">Мы оказываем юридическую помощь при ДТП и поддержку автовладельцев 24/7. На связи круглосуточно лучшие специалисты по автомобильному праву.</p>
+            <h3 class="text-xl font-semibold mb-4">Бесплатная консультация автоюриста в <span class="selected-city">Москва</span></h3>
+            <p class="mb-4">Водитель или пешеход, велосипедист, байкер, или, может, арендатор электросамоката, – все мы являемся участниками дорожного движения, а это означает одно: услуги автоюриста могут понадобиться практически каждому. Нужна бесплатная консультация автоюриста по телефону в <span class="selected-city">Москва</span> – обращайтесь круглосуточно! Страховые споры являются нашим профилем. Споры по ОСАГО или КАСКО, недоплата или отказ от страховки, навязываемой банком, некачественно выполненный ремонт автомобиля, – все это сфера компетенции автоадвоката по страховому праву – автоюриста.</p>
+            <h3 class="text-xl font-semibold mb-4">Услуги автоюриста</h3>
+            <p class="mb-4">Услуги автоюриста полезны, когда необходимо вернуть авто в салон или устранить его недостатки, решить возникшие противоречия по завышенной стоимости и скрытым комиссиям, расторжение договора и другие споры с дилерскими компаниями. Возврат прав, обжалование постановлений и штрафов, независимая экспертиза, – решение этих и множества других вопросов становится эффективнее и проще при обращении за помощью к автоюристу нашей организации. Цены на услуги автоюриста смотрите <a href="#" class="text-blue-600 hover:underline">тут</a>. Позвоните и запишитесь на бесплатную консультацию по телефону в <span class="selected-city">Москва</span>.</p>
+        </div>
+    </section>
+    <!--Вот тут удаляем фото под номером 2,3,4,5,6-->
+    <!-- Results --> 
+    <section class="section bg-white" id="results">
+        <div class="max-w-7xl mx-auto px-4 py-16">
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-center mb-8">Результаты нашей работы</h2>
+            <div class="swiper resultsSwiper w-full max-w-3xl mx-auto">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ResultsScreenshots/Screenshot1.webp" alt="Результат 1" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ResultsScreenshots/Screenshot7.webp" alt="Результат 7" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ResultsScreenshots/Screenshot8.webp" alt="Результат 8" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ResultsScreenshots/Screenshot9.webp" alt="Результат 9" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ResultsScreenshots/Screenshot10.webp" alt="Результат 10" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ResultsScreenshots/Screenshot11.webp" alt="Результат 11" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ResultsScreenshots/Screenshot12.webp" alt="Результат 12" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ResultsScreenshots/Screenshot13.webp" alt="Результат 13" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ResultsScreenshots/Screenshot14.webp" alt="Результат 14" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ResultsScreenshots/Screenshot15.webp" alt="Результат 15" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ResultsScreenshots/Screenshot16.webp" alt="Результат 16" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ResultsScreenshots/Screenshot17.webp" alt="Результат 17" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ResultsScreenshots/Screenshot18.webp" alt="Результат 18" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ResultsScreenshots/Screenshot19.webp" alt="Результат 19" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ResultsScreenshots/Screenshot20.webp" alt="Результат 20" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ResultsScreenshots/Screenshot21.webp" alt="Результат 21" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ResultsScreenshots/Screenshot22.webp" alt="Результат 22" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ResenieSudov/noroot1.webp" alt="Решение 1" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ResenieSudov/noroot2.webp" alt="Решение 2" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ResenieSudov/noroot3.webp" alt="Решение 3" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ResenieSudov/noroot4.webp" alt="Решение 4" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ResenieSudov/noroot5.webp" alt="Решение 5" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ResenieSudov/noroot6.webp" alt="Решение 6" />
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section bg-white" id="reviews">
+        <div class="max-w-7xl mx-auto px-4 py-16">
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-center mb-8">Отзывы клиентов</h2>
+            <div class="swiper mySwiper w-full max-w-3xl mx-auto">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ReviewsScreenshots/Screenshot1.webp" alt="Отзыв 1" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ReviewsScreenshots/Screenshot2.webp" alt="Отзыв 2" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ReviewsScreenshots/Screenshot3.webp" alt="Отзыв 3" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ReviewsScreenshots/Screenshot4.webp" alt="Отзыв 4" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ReviewsScreenshots/Screenshot5.webp" alt="Отзыв 5" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ReviewsScreenshots/Screenshot6.webp" alt="Отзыв 6" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ReviewsScreenshots/Screenshot7.webp" alt="Отзыв 7" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ReviewsScreenshots/Screenshot8.webp" alt="Отзыв 8" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ReviewsScreenshots/Screenshot9.webp" alt="Отзыв 9" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ReviewsScreenshots/Screenshot10.webp" alt="Отзыв 10" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ReviewsScreenshots/Screenshot11.webp" alt="Отзыв 11" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ReviewsScreenshots/Screenshot12.webp" alt="Отзыв 12" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ReviewsScreenshots/Screenshot13.webp" alt="Отзыв 13" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ReviewsScreenshots/Screenshot14.webp" alt="Отзыв 14" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ReviewsScreenshots/Screenshot15.webp" alt="Отзыв 15" />
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="ReviewsScreenshots/Screenshot16.webp" alt="Отзыв 16" />
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+        <div class="max-w-7xl mx-auto px-4 py-16">
+            <h2 class="text-2xl sm:text-4xl font-extrabold">Частые вопросы</h2>
+            <div class="mt-8 grid gap-4">
+                <details class="bg-white rounded-2xl p-5 shadow">
+                    <summary class="font-semibold cursor-pointer">Сколько стоит консультация автоюриста?</summary>
+                    <p class="mt-2 text-sm text-gray-700">Первичная диагностика и план действий — бесплатно. Письменные заключения и процессуальные документы — по тарифам.</p>
+                </details>
+                <details class="bg-white rounded-2xl p-5 shadow">
+                    <summary class="font-semibold cursor-pointer">Вы работаете дистанционно?</summary>
+                    <p class="mt-2 text-sm text-gray-700">Да, принимаем документы онлайн и представляем интересы по доверенности.</p>
+                </details>
+                <details class="bg-white rounded-2xl p-5 shadow">
+                    <summary class="font-semibold cursor-pointer">Делаете независимую экспертизу?</summary>
+                    <p class="mt-2 text-sm text-gray-700">Проводим оценку ущерба и УТС, при необходимости организуем осмотр.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / CTA -->
+    <section class="section" id="consult">
+        <div class="max-w-7xl mx-auto px-4 py-16">
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-center mb-8">Получите план действий за 15 минут</h2>
+            <p class="text-center mb-8 max-w-2xl mx-auto">Оставьте контакты и кратко опишите ситуацию — юрист свяжется с вами и скажет, что делать прямо сейчас.</p>
+            <ul class="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center mb-12 text-sm text-gray-600">
+                <li>Без предоплаты за консультацию</li>
+                <li>Конфиденциально</li>
+                <li>В мессенджерах или по телефону</li>
+            </ul>
+            <form id="contact-form" class="bg-white text-gray-900 rounded-2xl p-6 space-y-4 shadow mx-auto max-w-lg">
+                <div>
+                    <label for="username" class="text-sm font-medium">Ваше имя</label>
+                    <input required name="username" id="username" class="mt-1 w-full border rounded-xl px-4 py-3" placeholder="Иван" />
+                </div>
+                <div>
+                    <label for="city" class="text-sm font-medium">Город или регион</label>
+                    <select required name="city" id="city" class="mt-1 w-full border rounded-xl px-4 py-3">
+                        <option value="Москва и МО" selected>Москва</option>
+                        <option value="Рязань">Рязань</option>
+                        <option value="Ростов-на-Дону">Ростов-на-Дону</option>
+                        <option value="Владимир">Владимир</option>
+                        <option value="Нижний Новгород">г. Нижний Новгород</option>
+                        <option value="Самара">Самара</option>
+                        <option value="Пенза">Пенза</option>
+                        <option value="Тула">Тула</option>
+                        <option value="Тюмень">Тюмень</option>
+                        <option value="Мурманск">Мурманск</option>
+                        <option value="Омск">Омск</option>
+                        <option value="Воронеж">Воронеж</option>
+                        <option value="Барнаул">Барнаул</option>
+                        <option value="Архангельск">Архангельск</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="phone" class="text-sm font-medium">Телефон или мессенджер</label>
+                    <input required name="phone" id="phone" type="tel" class="mt-1 w-full border rounded-xl px-4 py-3" placeholder="+7 (___) ___-__-__" />
+                    <p id="phone-error" class="error-message hidden text-red-600">Пожалуйста, введите действительный номер телефона (например, +7 (XXX) XXX-XX-XX)</p>
+                </div>
+                <div>
+                    <label for="message" class="text-sm font-medium">Кратко о ситуации</label>
+                    <textarea required name="message" id="message" rows="4" class="mt-1 w-full border rounded-xl px-4 py-3" placeholder="Например: недоплата по ОСАГО, номер дела..."></textarea>
+                </div>
+                <div class="flex items-start gap-2 text-xs text-gray-600">
+                    <input type="checkbox" name="consent" id="consent" required class="mt-1" />
+                    <label for="consent">Соглашаюсь с <a href="privacy.html" class="underline">политикой обработки персональных данных</a></label>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold">Отправить заявку</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Raiting -->
+    <section class="section bg-gray-100" id="contacts">
+        <div class="max-w-7xl mx-auto px-4 py-16">
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-center">
+                РЕЙТИНГ ЮРИДИЧЕСКОЙ КОМПАНИИ «АвтоЮрист» С 2009 ГОДА
+            </h2>
+
+            <!-- Ряд изображений -->
+            <div class="mt-12 flex flex-wrap justify-center gap-6">
+                <img src="otherPhotos/r1.jpg.webp" alt="Рейтинг 1" class="rounded-lg shadow-md w-[15px] h-[15px]">
+                <img src="otherPhotos/r2.jpg.webp" alt="Рейтинг 2" class="rounded-lg shadow-md w-[15px] h-[15px]">
+                <img src="otherPhotos/r3.jpg.webp" alt="Рейтинг 3" class="rounded-lg shadow-md w-[15px] h-[15px]">
+                <img src="otherPhotos/r4.jpg.webp" alt="Рейтинг 4" class="rounded-lg shadow-md w-[15px] h-[15px]">
+                <img src="otherPhotos/r5.jpg.webp" alt="Рейтинг 5" class="rounded-lg shadow-md w-[15px] h-[15px]">
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Contacts -->
+    <section class="section bg-white" id="contacts">
+        <div class="max-w-7xl mx-auto px-4 py-16">
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-center">Контакты</h2>
+            <div class="mt-6 text-center space-y-2">
+                <p class="text-sm">
+                    Телефон:
+                    <a href="tel:+78006009969" class="font-semibold">7 (800) 333-23-51</a>
+                </p>
+                <p class="text-sm">
+                    E-mail:
+                    <a href="mailto:pressvozprav@mail.ru" class="font-semibold">pressvozprav@mail.ru</a>
+                </p>
+                <p class="text-sm">Часы работы: ПН–ПТ 09:00–20:00, СБ–ВС 09:00–19:00</p>
+                <div class="mt-4 flex justify-center gap-3">
+                    <a class="px-4 py-2 rounded-xl border" href="https://wa.me/78006009969" target="_blank">WhatsApp</a>
+                    <a class="px-4 py-2 rounded-xl border" href="https://t.me/78006009969" target="_blank">Telegram</a>
+                    <a class="px-4 py-2 rounded-xl border" href="viber://chat?number=+78006009969">Viber</a>
+                </div>
+            </div>
+            <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="p-4 border rounded-xl shadow-sm">
+                    <h3 class="font-semibold">г. Рязань</h3>
+                    <p class="text-sm text-gray-600">Московское шоссе, д. 8</p>
+                    <p class="text-sm font-medium mt-1">7 (800) 333-23-51</p>
+                </div>
+                <div class="p-4 border rounded-xl shadow-sm">
+                    <h3 class="font-semibold">г. Москва</h3>
+                    <p class="text-sm text-gray-600">ст. метро Павелецкая/Серпуховская,<br>Большой Строченовский пер., д. 13</p>
+                </div>
+                <div class="p-4 border rounded-xl shadow-sm">
+                    <h3 class="font-semibold">г. Ростов-на-Дону</h3>
+                    <p class="text-sm text-gray-600">пер. Семашко, 114</p>
+                    <p class="text-sm font-medium mt-1">7 (800) 333-23-51</p>
+                </div>
+                <div class="p-4 border rounded-xl shadow-sm">
+                    <h3 class="font-semibold">г. Владимир</h3>
+                    <p class="text-sm text-gray-600">ул. Большая Московская, д.42</p>
+                    <p class="text-sm font-medium mt-1">7 (800) 333-23-51</p>
+                </div>
+                <div class="p-4 border rounded-xl shadow-sm">
+                    <h3 class="font-semibold">г. Нижний Новгород</h3>
+                    <p class="text-sm text-gray-600">ул. Костина, д. 3</p>
+                    <p class="text-sm font-medium mt-1">7 (800) 333-23-51</p>
+                </div>
+                <div class="p-4 border rounded-xl shadow-sm">
+                    <h3 class="font-semibold">г. Самара</h3>
+                    <p class="text-sm text-gray-600">Московское шоссе, д. 55</p>
+                    <p class="text-sm font-medium mt-1">7 (800) 333-23-51</p>
+                </div>
+                <div class="p-4 border rounded-xl shadow-sm">
+                    <h3 class="font-semibold">г. Пенза</h3>
+                    <p class="text-sm text-gray-600">ул. Московская, 29, БЦ «Гермес»</p>
+                    <p class="text-sm font-medium mt-1">7 (800) 333-23-51</p>
+                </div>
+                <div class="p-4 border rounded-xl shadow-sm">
+                    <h3 class="font-semibold">г. Тула</h3>
+                    <p class="text-sm text-gray-600">ул. 9 Мая, д. 3</p>
+                    <p class="text-sm font-medium mt-1">7 (800) 333-23-51</p>
+                </div>
+                <div class="p-4 border rounded-xl shadow-sm">
+                    <h3 class="font-semibold">г. Тюмень</h3>
+                    <p class="text-sm text-gray-600">БЦ «Гранд», ул. 50 лет ВЛКСМ, д. 51</p>
+                    <p class="text-sm font-medium mt-1">7 (800) 333-23-51</p>
+                </div>
+                <div class="p-4 border rounded-xl shadow-sm">
+                    <h3 class="font-semibold">г. Омск</h3>
+                    <p class="text-sm text-gray-600">ул. Маяковского, д. 74</p>
+                    <p class="text-sm font-medium mt-1">7 (800) 333-23-51</p>
+                </div>
+                <div class="p-4 border rounded-xl shadow-sm">
+                    <h3 class="font-semibold">г. Воронеж</h3>
+                    <p class="text-sm text-gray-600">ул. Бакунина, д. 45А</p>
+                    <p class="text-sm font-medium mt-1">7 (800) 333-23-51</p>
+                </div>
+                 <div class="p-4 border rounded-xl shadow-sm">
+                    <h3 class="font-semibold">г. Мурманск</h3>
+                    <p class="text-sm text-gray-600">пр. Ленина, д. 12</p>
+                    <p class="text-sm font-medium mt-1">7 (800) 333-23-51</p>
+                </div>
+                <div class="p-4 border rounded-xl shadow-sm">
+                    <h3 class="font-semibold">г. Барнаул</h3>
+                    <p class="text-sm text-gray-600">ул. Деповская, д. 7</p>
+                    <p class="text-sm font-medium mt-1">7 (800) 333-23-51</p>
+                </div>
+                <div class="p-4 border rounded-xl shadow-sm">
+                    <h3 class="font-semibold">г. Мурманск</h3>
+                    <p class="text-sm text-gray-600">ул. Ленина, д. 12</p>
+                    <p class="text-sm font-medium mt-1">7 (800) 333-23-51</p>
+                </div>
+                <div class="p-4 border rounded-xl shadow-sm">
+                    <h3 class="font-semibold">г. Архангельск</h3>
+                    <p class="text-sm text-gray-600">ул. Попова д. 3</p>
+                    <p class="text-sm font-medium mt-1">7 (800) 333-23-51</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100" id="policy">
+        <div class="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-4 gap-8 text-sm">
+            <div>
+                <a href="#" class="font-extrabold tracking-tight text-xl">Авто<span class="text-blue-600">Юрист</span></a>
+                <p class="mt-2 text-gray-600">Правовая помощь водителям и владельцам авто в</p><span class="selected-city">Москва и МО</span>.
+            </div>
+            <div>
+                <div class="font-semibold">Навигация</div>
+                <ul class="mt-2 space-y-2">
+                    <li><a href="#services" class="hover:underline">Услуги</a></li>
+                    <li><a href="#prices" class="hover:underline">Цены</a></li>
+                    <li><a href="#faq" class="hover:underline">FAQ</a></li>
+                    <li><a href="#contacts" class="hover:underline">Контакты</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="font-semibold">Документы</div>
+                <ul class="mt-2 space-y-2">
+                    <li><a href="privacy.html#general-provisions" class="hover:underline">Пользовательское соглашение</a></li>
+                    <li><a href="privacy.html#principles" class="hover:underline">Политика конфиденциальности</a></li>
+                    <li><a href="privacy.html#final" class="hover:underline">Согласие на обработку ПДн</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="font-semibold">Реквизиты</div>
+                <p class="mt-2 text-gray-600">ИП Григорьева Анастасия Васильевна<br>ИНН 341277944, ОГРН 0000000000000</p>
+            </div>
+        </div>
+        <div class="border-t">
+            <div class="max-w-7xl mx-auto px-4 py-6 text-xs text-gray-500">© 2025 АвтоЮрист. Все права защищены. Информация на сайте не является публичной офертой.</div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="fixed bottom-6 right-6 bg-blue-600 text-white rounded-full p-3 sm:p-4 shadow-lg hover:bg-blue-700 transition-all duration-300 hidden z-50">
+        <svg class="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+        </svg>
+    </button>
+
+    <script>
+        // Находим все select элементы для города
+        const cityInputs = document.querySelectorAll('select[name="city"], select[name="top-bar-city"]');
+        const selectedCitySpans = document.querySelectorAll('.selected-city');
+
+        function updateSelectedCity(newCity) {
+            const city = (newCity || (cityInputs[0] ? cityInputs[0].value.trim() : '') || 'Москва и МО');
+            // Обновляем <title>
+            document.title = `Автоюрист в ${city} — бесплатная консультация 24/7`;
+            // Обновляем все элементы с классом .selected-city
+            selectedCitySpans.forEach(span => {
+                span.textContent = city;
+            });
+            // Обновляем все select элементы
+            cityInputs.forEach(select => {
+                select.value = city;
+            });
+            // Сохраняем в localStorage
+            localStorage.setItem('selectedCity', city);
+        }
+
+        // Слушаем изменения во всех select элементах
+        cityInputs.forEach(input => {
+            input.addEventListener('change', () => updateSelectedCity(input.value));
+        });
+
+        // При загрузке страницы
+        window.addEventListener('load', () => {
+            const savedCity = localStorage.getItem('selectedCity');
+            if (savedCity) {
+                cityInputs.forEach(select => {
+                    select.value = savedCity;
+                });
+            }
+            updateSelectedCity(savedCity);
+        });
+    </script>
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            new Swiper(".resultsSwiper", {
+                loop: true,
+                slidesPerView: 1,
+                spaceBetween: 20,
+                speed: 600,
+                effect: "slide",
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+
+            new Swiper(".mySwiper", {
+                loop: true,
+                slidesPerView: 1,
+                spaceBetween: 20,
+                speed: 600,
+                effect: "slide",
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+
+            new Swiper(".decisionsSwiper", {
+                loop: true,
+                slidesPerView: 1,
+                spaceBetween: 20,
+                speed: 600,
+                effect: "slide",
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+
+            const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 300) {
+                    scrollToTopBtn.classList.remove("hidden");
+                } else {
+                    scrollToTopBtn.classList.add("hidden");
+                }
+            });
+
+            scrollToTopBtn.addEventListener("click", function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            });
+            const menuToggle = document.getElementById("menu-toggle");
+            const mobileMenu = document.getElementById("mobile-menu");
+
+            menuToggle.addEventListener("click", function () {
+                mobileMenu.classList.toggle("active");
+            });
+
+            mobileMenu.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", function () {
+                    mobileMenu.classList.remove("active");
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contact-form");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Получение данных формы
+    const username = document.getElementById("username").value;
+    const phone = document.getElementById("phone").value;
+    const city = document.getElementById('city').value;
+    const message = document.getElementById("message").value;
+    const consent = document.getElementById("consent").checked;
+
+    // Валидация
+    if (!username || !phone || !message || !consent) {
+      alert("Пожалуйста, заполните все поля и согласитесь с политикой.");
+      return;
+    }
+
+    // Форматирование сообщения для Telegram
+    const telegramMessage = `<b>Новая заявка с сайта</b>\n\n` +
+                           `<b>Имя:</b> ${username}\n` +
+                           `<b>Город/Регион:</b> ${city}\n` +
+                           `<b>Телефон:</b> ${phone}\n` +
+                           `<b>Сообщение:</b> ${message}\n` +
+                           `<b>Согласие на обработку данных:</b> ${consent ? "Да" : "Нет"}`;
+
+    // Отправка в Telegram
+    const botToken = "7986439845:AAFq3LDe-tSOQU9dk6x7VcVjCk1QXpxtV1A"; // Замените на ваш токен от BotFather
+    const chatId = "-1003010331542"; // Замените на ваш Chat ID
+    const apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+    fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: telegramMessage,
+        parse_mode: "HTML",
+      }),
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data.ok) {
+          form.reset();
+          window.location.href = "thank-you.html"; // Перенаправление на thank-you.html
+        } else {
+          alert("Ошибка отправки: " + data.description);
+        }
+      })
+      .catch(error => {
+        alert("Ошибка отправки: " + error.message);
+      });
+  });
+});
+
+</script>
+
+<script>
+        // Mobile menu toggle
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      menuToggle.addEventListener("click", function () {
+        mobileMenu.classList.toggle("active");
+      });
+      mobileMenu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", function () {
+          mobileMenu.classList.remove("active");
+        });
+      });
+
+      // Phone input masking and validation
+      const phoneInput = document.getElementById("phone");
+      const phoneError = document.getElementById("phone-error");
+      const phoneMask = IMask(phoneInput, {
+        mask: "+{7} (000) 000-00-00",
+        lazy: false,
+        placeholderChar: "_"
+      });
+
+      function validatePhoneNumber(input) {
+        try {
+          const phoneNumber = libphonenumber.parsePhoneNumberFromString(input, "RU");
+          return phoneNumber && phoneNumber.isValid();
+        } catch (error) {
+          return false;
+        }
+      }
+      
+</script>
