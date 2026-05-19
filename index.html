@@ -1065,14 +1065,14 @@
                 <li>Конфиденциально</li>
                 <li>В мессенджерах или по телефону</li>
             </ul>
-            <form id="contact-form" action="https://formsubmit.co/xxxmrsaixxx@gmail.com" method="POST" class="bg-white text-gray-900 rounded-2xl p-6 space-y-4 shadow mx-auto max-w-lg">
-                <!-- FormSubmit.co configuration (hidden fields) -->
-                <input type="hidden" name="_subject" value="Новая заявка с сайта АвтоЮрист" />
-                <input type="hidden" name="_template" value="table" />
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_next" id="_next" value="" />
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="bg-white text-gray-900 rounded-2xl p-6 space-y-4 shadow mx-auto max-w-lg">
+                <!-- Web3Forms configuration (hidden fields) -->
+                <input type="hidden" name="access_key" value="240295c1-f48c-480d-ae4a-3c8fdf34e0ab" />
+                <input type="hidden" name="subject" value="Новая заявка с сайта АвтоЮрист" />
+                <input type="hidden" name="from_name" value="Сайт АвтоЮрист" />
+                <input type="hidden" name="redirect" id="_next" value="" />
                 <!-- Honeypot anti-spam (must stay empty) -->
-                <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none" />
+                <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" />
                 <div>
                     <label for="username" class="text-sm font-medium">Ваше имя</label>
                     <input required name="Имя" id="username" class="mt-1 w-full border rounded-xl px-4 py-3" placeholder="Иван" />
@@ -1396,7 +1396,7 @@
             });
         });
     </script>
-    <!-- Form submission (email via FormSubmit.co) + phone validation -->
+    <!-- Form submission (email via Web3Forms) + phone validation -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const form = document.getElementById("contact-form");
@@ -1439,7 +1439,7 @@
           });
         }
 
-        // After successful submission FormSubmit redirects to this URL.
+        // After successful submission Web3Forms redirects to this URL.
         // Build it from window.location so it works on localhost and in production.
         const nextInput = document.getElementById("_next");
         if (nextInput && !nextInput.value) {
@@ -1454,7 +1454,7 @@
             phoneInput && phoneInput.focus();
             return;
           }
-          // Let the browser submit the form natively to FormSubmit.co.
+          // Let the browser submit the form natively to Web3Forms.
           // Show a brief loading state before the navigation happens.
           if (submitBtn) {
             submitBtn.disabled = true;
